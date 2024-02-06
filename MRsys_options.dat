@@ -1,0 +1,27 @@
+#MRsys subdivision code input options 
+
+#=== General ====================================
+#Output console display
+con_disp = yes
+
+#=== File Paths =================================
+#Path to subdivision system data
+data_path = subd_data
+
+#Path to surface gradient response file 
+gradient_fname = mr_surfgrad
+
+#=== Subdivision Options ========================
+#Subdivision method (catmull_clark or interpolating_catmull_clark)
+sd_method = catmull_clark
+
+#=== Coarsening Options =========================
+#Coarsening base vertex valence (gt4 (>4) / lt4 (<4) / ne4 (!=4) / auto (forces an extrodinary vertex to a face centre))
+cb_vlnc = auto
+
+#Smooth reverse catmull-clark energy parameter omega (0 = minimise surface energy | 1 = minimise subdivision residual)
+srcc_omega = 1.0
+
+#=== Multi-Resolution Construction Options ======
+#Export mesh geometries for each level of the multi-resolution system 
+exp_mr_surfs = yes

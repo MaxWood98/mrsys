@@ -1,0 +1,11 @@
+io/
+dev/
+.vscode/
+obj/
+*.exe
+subd_data/
+old/
+dev/
+Release/
+test_geometry/
+MRsys_workspace.code-workspace
