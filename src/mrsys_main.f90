@@ -10,6 +10,7 @@ program mrsys
 use mrsys_io_mod
 use mrsys_oqc_mod
 use mrsys_catmull_clark_mod
+use mrsys_linear_subdivide_mod
 use mrsys_emc_multiresolution_mod
 use mrsys_smooth_reverse_catmull_clark_mod
 implicit none 
@@ -41,7 +42,7 @@ if (options%console_disp == 'yes') then
     write(*,'(A)')'+--------------------------------------------+'
     write(*,'(A)')'|                   MRsys                    |'
     write(*,'(A)')'|     Multi-Resolution Subdivision Code      |'
-    write(*,'(A)')'|        Version 0.2.5 || 05/02/2024         |'
+    write(*,'(A)')'|        Version 0.2.6 || 13/02/2024         |'
     write(*,'(A)')'|                 Max Wood                   |'
     write(*,'(A)')'|           University of Bristol            |'
     write(*,'(A)')'|    Department of Aerospace Engineering     |'
@@ -68,6 +69,8 @@ if ((options%mode == 'sd') .OR. (options%mode == 'sdm'))then !Subdivide supplied
         call propagate_catmull_clark(subd_system,mesh_base,options)
     elseif (options%subd_method == 'interpolating_catmull_clark') then
 
+    elseif (options%subd_method == 'linear') then
+        call propagate_linear_sd(subd_system,mesh_base,options)
     end if 
 
     !Export the final surface 

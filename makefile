@@ -19,6 +19,7 @@ OBJS = $(addprefix $(OBJDIR), \
 		mrsys_io_module.o\
 		mrsys_ordered_quad_coarsen_module.o\
 		mrsys_catmull_clark_module.o\
+		mrsys_linear_subdivide_module.o\
 		mrsys_smooth_reverse_catmull_clark_module.o\
 		mrsys_energy_minimised_coarsening_multiresolution_module.o\
 		mrsys_main.o\

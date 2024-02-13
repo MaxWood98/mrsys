@@ -12,7 +12,7 @@ data_path = subd_data
 gradient_fname = mr_surfgrad
 
 #=== Subdivision Options ========================
-#Subdivision method (catmull_clark or interpolating_catmull_clark)
+#Subdivision method (linear, catmull_clark or interpolating_catmull_clark)
 sd_method = catmull_clark
 
 #=== Coarsening Options =========================
