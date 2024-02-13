@@ -2,8 +2,8 @@
 !Max Wood - mw16116@bristol.ac.uk
 !Univeristy of Bristol - Department of Aerospace Engineering
 
-!Version : 0.2.4
-!Updated : 25-01-2024
+!Version : 0.2.6
+!Updated : 13-02-2024
 
 !Program
 program mrsys
